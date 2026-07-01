@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: #2f3428;
+  background: #f8efd8;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+button,
+video {
+  font: inherit;
+}
+
+.page {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at 20% 20%, #ffdca8 0, transparent 26%),
+    radial-gradient(circle at 80% 10%, #cdebb9 0, transparent 25%),
+    radial-gradient(circle at 75% 85%, #f7b5a7 0, transparent 30%),
+    linear-gradient(135deg, #fff4d9, #dcefc9);
+}
+
+.blob {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(1px);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.blob-one {
+  width: 18rem;
+  height: 18rem;
+  top: -5rem;
+  left: -4rem;
+  background: #f8b98f;
+  border-radius: 58% 42% 44% 56% / 49% 54% 46% 51%;
+}
+
+.blob-two {
+  width: 22rem;
+  height: 22rem;
+  right: -7rem;
+  top: 8rem;
+  background: #a9d98b;
+  border-radius: 40% 60% 61% 39% / 46% 41% 59% 54%;
+}
+
+.blob-three {
+  width: 16rem;
+  height: 16rem;
+  left: 12%;
+  bottom: -5rem;
+  background: #f2d084;
+  border-radius: 48% 52% 64% 36% / 41% 44% 56% 59%;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 760px);
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid rgb(255 255 255 / 0.55);
+  border-radius: 2rem;
+  background: rgb(255 252 240 / 0.72);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 30px 80px rgb(90 70 40 / 0.16);
+}
+
+.eyebrow,
+.label {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #72845f;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  margin-top: 0.4rem;
+  font-size: clamp(2.4rem, 8vw, 4.8rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.intro {
+  max-width: 34rem;
+  margin-top: 1rem;
+  color: #686c5a;
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+.video-card {
+  margin-top: 1.5rem;
+}
+
+.video-card video {
+  display: block;
+  width: 100%;
+  border-radius: 1.35rem;
+  background: #111;
+  box-shadow: 0 20px 50px rgb(90 70 40 / 0.18);
+}
+
+.plants-card {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border-radius: 1.5rem;
+  background: rgb(255 255 255 / 0.72);
+  box-shadow: 0 20px 50px rgb(90 70 40 / 0.1);
+}
+
+.plants-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.plants-header h2 {
+  margin-top: 0.2rem;
+  font-size: 1.4rem;
+  letter-spacing: -0.03em;
+}
+
+.water-badge {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: #e5f3d4;
+  font-size: 1.35rem;
+}
+
+.plant-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.plant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem;
+  border-radius: 1rem;
+  background: #fffaf0;
+}
+
+.plant-main {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.plant-emoji {
+  font-size: 1.6rem;
+}
+
+.plant-item h3 {
+  font-size: 1rem;
+}
+
+.plant-item p {
+  margin-top: 0.15rem;
+  color: #6d705f;
+  font-size: 0.9rem;
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.6rem 0.85rem;
+  background: #dceec7;
+  color: #334225;
+  font-size: 0.9rem;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+button:hover {
+  background: #cfe7b2;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 1rem;
+  }
+
+  .card {
+    border-radius: 1.5rem;
+  }
+
+  .plant-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
